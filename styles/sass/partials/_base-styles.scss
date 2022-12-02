@@ -1,0 +1,83 @@
+@use "variables" as *;
+
+.wrapper {
+    width: min(90%, 1000px);
+    margin: 0 auto;
+}
+
+// button {
+//   color: variables.$primary;
+//   background-color: transparent;
+//   padding: 18px 36px;
+//   border: 2px solid variables.$primary;
+//   font-size: 0.8rem;
+//   font-weight: bold;
+//   line-height: 1.2rem;
+//   text-align: center;
+//   cursor: pointer;
+//   transition: 0.3s;
+//   &:hover {
+//     background-color: variables.$primary;
+//     color: variables.$solidWhite;
+//   }
+//   &:focus {
+//     background-color: variables.$primary;
+//     color: variables.$solidWhite;
+//   }
+//   &.secondary {
+//     background-color: transparent;
+//     border-color: variables.$solidWhite;
+//     color: variables.$solidWhite;
+//     padding: 8px 12px;
+//     &:hover {
+//       background-color: variables.$solidWhite;
+//       color:variables.$primary;
+//     }
+//     &:focus {
+//       background-color: variables.$solidWhite;
+//       color:variables.$primary;
+//     }
+//   }
+//   &.solid {
+//     color: variables.$solidWhite;
+//     background-color: variables.$primary;
+//     &:hover {
+//       color: variables.$primary;
+//       background-color: variables.$solidWhite;
+//     }
+//   }
+//   /* style the button in the main nav menu to look just like an icon */
+//   &.menuIcon {
+//     display: inherit;
+//     padding: 0;
+//     border: none;
+//     &:hover {
+//       background-color: transparent;
+//     }
+//     &:focus {
+//       background-color: transparent;
+//     }
+//   }
+// }
+
+// a {
+//     &.button {
+//         color: variables.$primary;
+//         background-color: transparent;
+//         padding: 18px 36px;
+//         border: 2px solid variables.$primary;
+//         font-size: 0.8rem;
+//         font-weight: bold;
+//         line-height: 1.2rem;
+//         text-align: center;
+//         transition: 0.3s;
+//         &:hover {
+//             background-color: variables.$primary;
+//             color: variables.$solidWhite;
+//         }
+//         &:focus {
+//             background-color: variables.$primary;
+//             color: variables.$solidWhite;
+//         }
+//     }
+// }
