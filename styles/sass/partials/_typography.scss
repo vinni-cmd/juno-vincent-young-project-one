@@ -5,22 +5,22 @@ html {
   font-size: 62.5%;
 }
 
-// body {
-//   font-family: variables.$bodyFont;
-//   font-size: 1rem;
-//   color: variables.$primary;
-// }
+body {
+  font-family: $body-ff;
+  font-size: 2rem;
+  color: $primary-fc;
+}
 
-// h1, h2, h3, h4, blockquote {
-//   font-family: variables.$headingFont;
-//   font-weight: normal;
-//   color: variables.$primary;
-//   margin: 0;
-// }
+h1, h2, h3 {
+  font-family: $heading-ff;
+  text-transform: uppercase;
+  margin: 0;
+}
 
-// h1 {
-//   font-size: 1.4rem;
-// }
+h1 {
+    // adding the rem value to the vw value is needed to make the fs responsive to zooming in/out on the browser 
+  font-size: clamp(5rem, 12vw + 1rem, 13.8rem);
+}
 
 // h2 {
 //   font-size: 2rem;

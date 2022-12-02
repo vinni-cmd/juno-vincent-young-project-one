@@ -230,9 +230,47 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  color: #2c2c2c;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(5rem, 12vw + 1rem, 13.8rem);
+}
+
 .wrapper {
   width: min(90%, 1000px);
   margin: 0 auto;
+}
+
+a {
+  color: #2c2c2c;
+  text-decoration: none;
+  display: inline-block;
+}
+a.button {
+  background-color: #4ceea7;
+  padding: 0.55em 0.75em;
+  font-family: "Playfair Display", serif;
+  line-height: 3.2rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+a.button:hover, a.button:focus {
+  background-color: #2c2c2c;
+  color: #4ceea7;
+  outline: none;
 }
 
 @media (max-width: 1000px) {
