@@ -62,22 +62,22 @@
 
 // a {
 //     &.button {
-//         color: variables.$primary;
+//         color: $primary;
 //         background-color: transparent;
 //         padding: 18px 36px;
-//         border: 2px solid variables.$primary;
+//         border: 2px solid $primary;
 //         font-size: 0.8rem;
 //         font-weight: bold;
 //         line-height: 1.2rem;
 //         text-align: center;
 //         transition: 0.3s;
 //         &:hover {
-//             background-color: variables.$primary;
-//             color: variables.$solidWhite;
+//             background-color: $primary;
+//             color: $solidWhite;
 //         }
 //         &:focus {
-//             background-color: variables.$primary;
-//             color: variables.$solidWhite;
+//             background-color: $primary;
+//             color: $solidWhite;
 //         }
 //     }
 // }

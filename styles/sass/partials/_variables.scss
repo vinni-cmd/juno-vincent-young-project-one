@@ -1,12 +1,10 @@
-// $baseFont: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-
-// site colors
-// $primary-fc
-// $first-accent-color
-
-
-// site fonts
-// $heading-ff: "";
-// $body-ff: "";
-
-// white space 
+// site colors (variable name ends with 'c')
+$primary-fc: #2c2c2c;
+$secondary-fc: #fafafa; 
+$primary-ac: #4ceea7;
+$secondary-ac: #fdfa69;
+$primary-bgc: #effdf3;
+$secondary-bgc: #fafafa; 
+// site font families (variable name ends with 'ff')
+$heading-ff: "Playfair Display", serif;
+$body-ff: "Roboto", sans-serif;

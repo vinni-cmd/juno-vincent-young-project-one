@@ -1,9 +1,9 @@
 @use "variables" as *;
 
-// html {
-//   /* if we set our root element font-size to 125%, then 1 rem = 20px */
-//   font-size: 125%;
-// }
+html {
+//   setting default text size to 10px. 1 rem = 10px
+  font-size: 62.5%;
+}
 
 // body {
 //   font-family: variables.$bodyFont;

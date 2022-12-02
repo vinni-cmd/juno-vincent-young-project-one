@@ -226,6 +226,10 @@ html {
   overflow: hidden;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 .wrapper {
   width: min(90%, 1000px);
   margin: 0 auto;
@@ -239,7 +243,4 @@ html {
 }
 @media (max-width: 500px) {
   /* all of our styles for MOBILE devices will go within this breakpoint */
-}
-body {
-  background-color: red;
 }
