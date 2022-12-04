@@ -1,5 +1,9 @@
 @use "variables" as *;
 
+body {
+    min-height: 100vh;
+}
+
 .wrapper {
     width: min(90%, 1000px);
     margin: 0 auto;

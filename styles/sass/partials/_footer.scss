@@ -1,1 +1,12 @@
 @use "variables" as *;
+
+footer {
+    background-color: $primary-fc;
+    color: $secondary-fc;
+    padding-top: 0.6em;
+    padding-bottom: 0.4em;
+    p {
+        margin: 0;
+        text-align: center;
+    }
+}

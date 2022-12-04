@@ -4,4 +4,8 @@ header {
     background-image: url(../../../assets/header-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 100vh;
+    .header-img {
+        // position: absolute;
+    }
 }
