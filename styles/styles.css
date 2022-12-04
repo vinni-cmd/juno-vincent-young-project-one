@@ -335,7 +335,7 @@ nav ul a:hover, nav ul a:focus {
 }
 
 header {
-  background-image: url(../../../assets/header-image.jpg);
+  background-image: url(../../assets/header-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
@@ -347,6 +347,29 @@ header {
   background-position: right 0px bottom 0px;
   background-size: 100% 40%;
   padding-bottom: 500px;
+}
+
+.gallery {
+  padding: 4em 0 4em;
+  background-color: #fafafa;
+}
+.gallery .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2em;
+}
+@media (max-width: 1000px) {
+  .gallery .wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 footer {
