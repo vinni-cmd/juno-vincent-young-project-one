@@ -1,1 +1,12 @@
 @use "variables" as *;
+
+// details section
+
+.details {
+    background-color: $primary-bgc;
+    background-image: url(../../assets/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: right 0px bottom 0px;
+    background-size: 100% 40%;
+    padding-bottom: 500px;
+}

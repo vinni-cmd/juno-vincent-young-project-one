@@ -269,6 +269,8 @@ a {
   color: inherit;
   text-decoration: none;
   display: inline-block;
+}
+a:hover {
   cursor: pointer;
 }
 a.button {
@@ -302,6 +304,45 @@ ul, li {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+nav {
+  font-family: "Playfair Display", serif;
+  text-transform: uppercase;
+  line-height: 2.9rem;
+  letter-spacing: 0.1rem;
+}
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 2.5em;
+}
+nav ul a {
+  padding: 0.3em 0.5em;
+  border-bottom: 4px solid rgba(0, 0, 0, 0);
+}
+nav ul a:hover, nav ul a:focus {
+  outline: none;
+  border-bottom: 4px solid #4ceea7;
+}
+
+header {
+  background-image: url(../../../assets/header-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.details {
+  background-color: #effdf3;
+  background-image: url(../../assets/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: right 0px bottom 0px;
+  background-size: 100% 40%;
+  padding-bottom: 500px;
 }
 
 @media (max-width: 1000px) {

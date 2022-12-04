@@ -64,7 +64,9 @@ a {
     color: inherit;
     text-decoration: none;
     display: inline-block;
-    cursor: pointer;
+    &:hover {
+        cursor: pointer;
+    }
     &.button {
         background-color: $primary-ac;
         padding: 0.55em 0.75em;
