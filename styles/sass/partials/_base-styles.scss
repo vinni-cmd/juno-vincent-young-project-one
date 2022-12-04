@@ -61,9 +61,10 @@
 // }
 
 a {
-    color: $primary-fc;
+    color: inherit;
     text-decoration: none;
     display: inline-block;
+    cursor: pointer;
     &.button {
         background-color: $primary-ac;
         padding: 0.55em 0.75em;
@@ -81,3 +82,20 @@ a {
         }
     }
 }
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.img-container {
+    background-color: $secondary-ac;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
