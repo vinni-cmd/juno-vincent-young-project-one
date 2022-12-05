@@ -1,5 +1,98 @@
 @use "variables" as *;
 
+// about section
+
+.about {
+    background-color: $primary-bgc;
+    padding: $section-padding;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+// services section
+
+.services {
+    background-color: $secondary-bgc;
+    padding: $section-padding;
+    display: flex;
+    justify-content: center;
+    gap: 6em;
+    .gear,
+    .skills {
+        flex-basis: 50%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .gear {
+        flex-direction: column;
+        .gear-text {
+            align-self: flex-end;
+            max-width: min(90vw, (1000px - 4em) / 2);
+            :nth-child(odd) {
+                text-align: right;
+            }
+            padding-left: 1em;
+        }
+        .gear-img {
+            box-shadow: 1.5em 1.5em 0 0 $secondary-ac;
+            position: relative;
+            top: -100px;
+        }
+    }
+    .skills {
+        flex-direction: column-reverse;
+        .skills-text {
+            max-width: min(90vw, (1000px - 4em) / 2) ;
+            padding-right: 1em;
+        }
+        .skills-img {
+            box-shadow: -1.5em 1.5em 0 0 $secondary-ac;
+            position: relative;
+            bottom: -100px;
+        }
+    }
+    @media (max-width: 800px) {
+            flex-direction: column;
+            gap: 1em;
+            .gear,
+            .skills {
+                flex-direction: column;
+                gap: 2em;
+                .gear-img,
+                .skills-img {
+                    position: static;
+                    width: max(50%, 300px);
+                }
+                .gear-text,
+                .skills-text {
+                    max-width: 100%;
+                    padding: 0 10vw 0;
+                }
+            }
+    }
+    @media (max-width: 500px) {
+        .gear,
+        .skills {
+            .gear-text,
+            .skills-text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                & > * {
+                    text-align: center;
+                }
+                :nth-child(odd) {
+                text-align: center;
+            }
+            }
+        }
+    }
+}
+
+
 // details section
 
 .details {
@@ -8,7 +101,7 @@
     background-repeat: no-repeat;
     background-position: right 0px bottom 0px;
     background-size: 100% 40%;
-    padding-bottom: 500px;
+    padding: $section-padding;
 }
 
 

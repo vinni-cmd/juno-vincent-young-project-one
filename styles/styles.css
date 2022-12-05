@@ -336,13 +336,149 @@ header {
   background-size: cover;
   min-height: 100vh;
 }
+.about {
+  background-color: #effdf3;
+  padding: 4em 0 4em;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.services {
+  background-color: #fafafa;
+  padding: 4em 0 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 6em;
+}
+.services .gear,
+.services .skills {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.services .gear {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.services .gear .gear-text {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  max-width: min(90vw, (1000px - 4em) / 2);
+  padding-left: 1em;
+}
+.services .gear .gear-text :nth-child(odd) {
+  text-align: right;
+}
+.services .gear .gear-img {
+  -webkit-box-shadow: 1.5em 1.5em 0 0 #fdfa69;
+          box-shadow: 1.5em 1.5em 0 0 #fdfa69;
+  position: relative;
+  top: -100px;
+}
+.services .skills {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+.services .skills .skills-text {
+  max-width: min(90vw, (1000px - 4em) / 2);
+  padding-right: 1em;
+}
+.services .skills .skills-img {
+  -webkit-box-shadow: -1.5em 1.5em 0 0 #fdfa69;
+          box-shadow: -1.5em 1.5em 0 0 #fdfa69;
+  position: relative;
+  bottom: -100px;
+}
+@media (max-width: 800px) {
+  .services {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1em;
+  }
+  .services .gear,
+.services .skills {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2em;
+  }
+  .services .gear .gear-img,
+.services .gear .skills-img,
+.services .skills .gear-img,
+.services .skills .skills-img {
+    position: static;
+    width: max(50%, 300px);
+  }
+  .services .gear .gear-text,
+.services .gear .skills-text,
+.services .skills .gear-text,
+.services .skills .skills-text {
+    max-width: 100%;
+    padding: 0 10vw 0;
+  }
+}
+@media (max-width: 500px) {
+  .services .gear .gear-text,
+.services .gear .skills-text,
+.services .skills .gear-text,
+.services .skills .skills-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .services .gear .gear-text > *,
+.services .gear .skills-text > *,
+.services .skills .gear-text > *,
+.services .skills .skills-text > * {
+    text-align: center;
+  }
+  .services .gear .gear-text :nth-child(odd),
+.services .gear .skills-text :nth-child(odd),
+.services .skills .gear-text :nth-child(odd),
+.services .skills .skills-text :nth-child(odd) {
+    text-align: center;
+  }
+}
+
 .details {
   background-color: #effdf3;
   background-image: url(../../assets/banner.jpg);
   background-repeat: no-repeat;
   background-position: right 0px bottom 0px;
   background-size: 100% 40%;
-  padding-bottom: 500px;
+  padding: 4em 0 4em;
 }
 
 .profile {
