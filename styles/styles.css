@@ -311,6 +311,8 @@ nav {
   text-transform: uppercase;
   line-height: 2.9rem;
   letter-spacing: 0.1rem;
+  position: fixed;
+  width: min(90%, 1000px);
 }
 nav ul {
   display: -webkit-box;
