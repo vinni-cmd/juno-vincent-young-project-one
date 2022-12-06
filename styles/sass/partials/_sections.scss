@@ -97,11 +97,13 @@
 
 .details {
     background-color: $primary-bgc;
-    background-image: url(../../assets/banner.jpg);
-    background-repeat: no-repeat;
-    background-position: right 0px bottom 0px;
-    background-size: 100% 40%;
     padding: $section-padding;
+    .banner-img {
+        height: 250px;
+        background-image: url(../../assets/banner.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 
 
