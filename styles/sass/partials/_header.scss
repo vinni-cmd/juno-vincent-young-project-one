@@ -5,7 +5,23 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
+    position: relative;
     .header-img {
-        // position: absolute;
+        position: absolute;
+        max-width: 40%;
+        bottom: -15%;
+        right: 0;
+        box-shadow: 0 0 0 1.5em $secondary-ac;
+        z-index: 0;
+    }
+    h1 {
+        // text-align: center;
+        // padding-top: 80%;
+        position: absolute;
+        z-index: 1;
+        bottom: 10%;
+        right: 0;
+        left: 0;
+        text-align: center;
     }
 }

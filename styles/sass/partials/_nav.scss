@@ -7,17 +7,35 @@ nav {
     letter-spacing: 0.1rem;
     position: fixed;
     width: min(90%, 1000px);
+    z-index: 2;
     ul {
         display: flex;
         justify-content: flex-end;
         gap: 2.5em;
+        li:first-child {
+            display: none;
+            font-size: 3rem;
+        }
         a {
-            padding: 0.3em 0.5em;
+            padding: 0.5em 0.5em;
             border-bottom: 4px solid rgba($color: #000000, $alpha: 0);
             &:hover,
             &:focus {
                 outline: none;
                 border-bottom: 4px solid $primary-ac;
+            }
+        }
+        @media (max-width: 800px) {
+            li {
+                display: none;
+            }
+            li:first-child {
+                display: revert;
+                button:hover,
+                button:focus {
+                    outline: none;
+                    border-bottom: 4px solid $primary-ac;
+                }
             }
         }
     }

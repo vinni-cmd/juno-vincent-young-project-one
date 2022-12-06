@@ -243,7 +243,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: clamp(5rem, 12vw + 1rem, 13.8rem);
+  font-size: clamp(5rem, 10vw + 1rem, 13.8rem);
 }
 
 h2 {
@@ -267,6 +267,15 @@ body {
 .wrapper {
   width: min(90%, 1000px);
   margin: 0 auto;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0.4em;
+}
+button:hover {
+  cursor: pointer;
 }
 
 a {
@@ -313,6 +322,7 @@ nav {
   letter-spacing: 0.1rem;
   position: fixed;
   width: min(90%, 1000px);
+  z-index: 2;
 }
 nav ul {
   display: -webkit-box;
@@ -323,13 +333,30 @@ nav ul {
           justify-content: flex-end;
   gap: 2.5em;
 }
+nav ul li:first-child {
+  display: none;
+  font-size: 3rem;
+}
 nav ul a {
-  padding: 0.3em 0.5em;
+  padding: 0.5em 0.5em;
   border-bottom: 4px solid rgba(0, 0, 0, 0);
 }
 nav ul a:hover, nav ul a:focus {
   outline: none;
   border-bottom: 4px solid #4ceea7;
+}
+@media (max-width: 800px) {
+  nav ul li {
+    display: none;
+  }
+  nav ul li:first-child {
+    display: revert;
+  }
+  nav ul li:first-child button:hover,
+nav ul li:first-child button:focus {
+    outline: none;
+    border-bottom: 4px solid #4ceea7;
+  }
 }
 
 header {
@@ -337,7 +364,26 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
+  position: relative;
 }
+header .header-img {
+  position: absolute;
+  max-width: 40%;
+  bottom: -15%;
+  right: 0;
+  -webkit-box-shadow: 0 0 0 1.5em #fdfa69;
+          box-shadow: 0 0 0 1.5em #fdfa69;
+  z-index: 0;
+}
+header h1 {
+  position: absolute;
+  z-index: 1;
+  bottom: 10%;
+  right: 0;
+  left: 0;
+  text-align: center;
+}
+
 .about {
   background-color: #effdf3;
   padding: 4em 0 4em;

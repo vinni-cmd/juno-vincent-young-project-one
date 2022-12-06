@@ -19,7 +19,7 @@ h1, h2, h3, h4 {
 
 h1 {
     // adding the rem value to the vw value is needed to make the fs responsive to zooming in/out on the browser 
-  font-size: clamp(5rem, 12vw + 1rem, 13.8rem);
+  font-size: clamp(5rem, 10vw + 1rem, 13.8rem);
 }
 
 h2 {
