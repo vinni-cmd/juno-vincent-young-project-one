@@ -10,6 +10,11 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    h2 {
+        // Required to get heading to display on top of header img at smaller screen sizes
+        position: relative;
+        z-index: 1;
+    }
 }
 
 // services section
@@ -98,8 +103,30 @@
 .details {
     background-color: $primary-bgc;
     padding: $section-padding;
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        @media (max-width: 800px) {
+            flex-direction: column;    
+            flex-wrap: nowrap;     
+        }
+        .item {
+            flex-basis: 50%;
+            display: flex;
+            gap: 1em;
+        }
+    }
+    .icon a {
+        width: 4rem;
+        background-color: $primary-ac;
+        border-radius: 50%;
+        padding: 0.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .banner-img {
-        height: 250px;
+        height: 50vh;
         background-image: url(../../assets/banner.jpg);
         background-repeat: no-repeat;
         background-size: cover;
