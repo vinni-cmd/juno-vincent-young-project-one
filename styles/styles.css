@@ -321,10 +321,19 @@ nav {
   line-height: 2.9rem;
   letter-spacing: 0.1rem;
   position: fixed;
-  width: min(90%, 1000px);
   z-index: 2;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 nav ul {
+  width: min(90%, 1000px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -332,10 +341,6 @@ nav ul {
       -ms-flex-pack: end;
           justify-content: flex-end;
   gap: 2.5em;
-}
-nav ul li {
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 5px;
 }
 nav ul li:first-child {
   display: none;
@@ -350,8 +355,18 @@ nav ul a:hover, nav ul a:focus {
   border-bottom: 4px solid #4ceea7;
 }
 @media (max-width: 800px) {
-  nav ul li {
-    display: none;
+  nav ul li.mobile-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
   }
   nav ul li:first-child {
     display: revert;
