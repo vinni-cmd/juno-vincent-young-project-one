@@ -246,6 +246,10 @@ h1 {
   font-size: clamp(5rem, 10vw + 1rem, 13.8rem);
 }
 
+h1.page-header {
+  font-size: clamp(4rem, 10vw + 1rem, 8rem);
+}
+
 h2 {
   font-size: 4.2rem;
   letter-spacing: 0.1rem;
@@ -402,6 +406,14 @@ header h1 {
   left: 0;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.4);
+}
+
+.contact-header {
+  background-image: url(../../assets/contact-header.jpg);
+  min-height: 80vh;
+}
+.contact-header h1 {
+  bottom: 50%;
 }
 
 .about {
