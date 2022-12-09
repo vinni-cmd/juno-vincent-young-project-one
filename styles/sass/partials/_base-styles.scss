@@ -5,8 +5,16 @@ body {
 }
 
 .wrapper {
-    width: min(90%, 1000px);
+    width: min(90%, 1200px);
     margin: 0 auto;
+}
+
+.new-line {
+    display: block;
+}
+
+.upper-case {
+    text-transform: uppercase;
 }
 
 // button {
@@ -114,3 +122,6 @@ ul, li {
     list-style: none;
 }
 
+address {
+    font-style: normal;
+}

@@ -182,8 +182,47 @@
     }
 }
 
-// contact-details section
+// contact-page
 
-.contact-main {
+main.contact-main {
     background-color: $primary-bgc;
+    min-height: 45vh;
+    padding: $section-padding;
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4em;
+        @media (max-width: 1200px) {
+            flex-direction: column-reverse;            
+        }
+    }
+}
+
+.contact-details {
+    a {
+        transition: all 0.3s linear;
+        &:hover,
+        &:focus {
+            outline: none;
+            color: $primary-ac;
+        }
+    }
+    .social {
+        display: flex;
+        gap: 1em;
+        padding-bottom: 1em;
+    }
+    address * {
+        line-height: 3.2rem;
+        // to get all street address text to remain on same line 
+        width: max-content;
+    }
+    .email-address {
+        font-family: $heading-ff;
+        font-size: 2.6rem;
+        text-transform: uppercase;
+        letter-spacing: 0.11rem;
+        padding-bottom: 1em;
+    }
 }
