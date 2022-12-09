@@ -19,16 +19,28 @@
         <div class="wrapper">
             <nav>
                 <ul>
-                    <li><button><i aria-hidden class="fa-solid fa-bars"></i></button></li>
-                    <li class="mobile-hidden"><a href="./index.html#home">home</a></li>
-                    <li class="mobile-hidden"><a href="./index.html#about">about</a></li>
-                    <li class="mobile-hidden"><a href="./blog.html">blog</a></li>
-                    <li class="mobile-hidden"><a href="./contact.html">contact</a></li>
+                    <!-- should not be using aria hidden here. It does not quite work for focusable elements -->
+                    <li aria-hidden="true">
+                        <button>
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                    </li>
+                    <li class="mobile-hidden">
+                        <a href="./index.html#home">home</a>
+                    </li>
+                    <li class="mobile-hidden">
+                        <a href="./index.html#about">about</a>
+                    </li>
+                    <li class="mobile-hidden">
+                        <a href="./blog.html">blog</a>
+                    </li>
+                    <li class="mobile-hidden">
+                        <a href="./contact.html">contact</a>
+                    </li>
                 </ul>
             </nav>
             <h1 class="page-header">get in touch</h1>
-        </div>
-        <!-- .wrapper end -->
+        </div><!-- .wrapper end -->
     </header>
     <main class="contact-main">
         <div class="wrapper">
@@ -51,7 +63,7 @@
                             <i aria-hidden class="fa-brands fa-whatsapp"></i>
                         </a>
                     </li>
-                </ul>
+                </ul> <!-- .social end -->
                 <address>
                     <div class="email-address">
                         <a href="mailto:info@email.com">info@email.com</a>
@@ -62,7 +74,7 @@
                         <span class="new-line upper-case">m5v2d5</span>
                     </div>
                 </address>
-            </section>
+            </section> <!-- .contact-details end -->
             <section class="contact-form contact-item">
                 <form action="#" method="post">
                     <fieldset class="user-details">
@@ -76,8 +88,8 @@
                         required></textarea>
                     <button type="submit">submit</button>
                 </form>
-            </section>
-        </div>
+            </section> <!-- .contact-form end-->
+        </div> <!-- .wrapper end -->
     </main>
     <footer>
         <p>Copyright &copy 2018 HackerYou</p>

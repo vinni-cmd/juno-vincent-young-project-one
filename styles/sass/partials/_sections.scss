@@ -114,6 +114,13 @@
             flex-basis: 50%;
             display: flex;
             gap: 1em;
+            .item-text a {
+                    border-bottom: 4px solid rgba($color: #000000, $alpha: 0);
+                    &:focus,
+                    &:hover {
+                        border-bottom: 4px solid $secondary-ac;
+                    }
+                }
         }
     }
     .icon a {
@@ -124,6 +131,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        &:focus,    
+        &:hover {
+            color: $secondary-ac;
+            background-color: $primary-fc;
+        }
     }
     .banner-img {
         height: 50vh;

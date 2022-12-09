@@ -19,19 +19,31 @@
 		<div class="wrapper">
 			<nav>
 				<ul>
-					<!-- should not be using aria hidden here- it does not quite work for focusable elements -->
-					<li><button><i aria-hidden class="fa-solid fa-bars"></i></button></li>
-					<li class="mobile-hidden"><a href="./index.html#home">home</a></li>
-					<li class="mobile-hidden"><a href="./index.html#about">about</a></li>
-					<li class="mobile-hidden"><a href="./blog.html">blog</a></li>
-					<li class="mobile-hidden"><a href="./contact.html">contact</a></li>
+					<!-- should not be using aria hidden here. It does not quite work for focusable elements -->
+					<li aria-hidden="true">
+						<button>
+							<i class="fa-solid fa-bars"></i>
+						</button>
+					</li>
+					<li class="mobile-hidden">
+						<a href="./index.html#home">home</a>
+					</li>
+					<li class="mobile-hidden">
+						<a href="./index.html#about">about</a>
+					</li>
+					<li class="mobile-hidden">
+						<a href="./blog.html">blog</a>
+					</li>
+					<li class="mobile-hidden">
+						<a href="./contact.html">contact</a>
+					</li>
 				</ul>
 			</nav>
 			<h1>captured</h1>
-			<div class="header-img img-container"><img src="./assets/header-box-image.jpg"
-					alt="A black camera lens lying on a light colored surface"></div>
-		</div>
-		<!-- .wrapper end -->
+			<div class="header-img img-container">
+				<img src="./assets/header-box-image.jpg" alt="A black camera lens lying on a light colored surface">
+			</div>
+		</div><!-- .wrapper end -->
 	</header>
 	<main>
 		<section class="about" id="about">
@@ -55,12 +67,16 @@
 					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit soluta quaerat error
 						sapiente, voluptates tempora. Accusantium necessitatibus, optio provident eveniet similique
 						voluptates? Magnam quaerat laborum, minima, placeat reiciendis voluptas nulla fuga.</p>
-					<div class="button-container"><a href="#" class="button">read more</a></div>
+					<div class="button-container">
+						<a href="#" class="button">read more</a>
+					</div>
 				</div><!-- .gear-text end -->
 			</div><!-- .gear end -->
 			<div class="skills">
-				<div class="skills-img img-container"><img src="./assets/right-image.jpg"
-						alt="A person holding a camera at one of Captured's skills clinics"></div>
+				<div class="skills-img img-container">
+					<img src="./assets/right-image.jpg"
+						alt="A person holding a camera at one of Captured's skills clinics">
+				</div>
 				<div class="skills-text">
 					<h3>unlock your skills</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores in possimus ullam dicta
@@ -73,9 +89,11 @@
 		<section class="details">
 			<div class="wrapper">
 				<div class="item">
-					<div class="icon"><a href="#" aria-label="Go to Juno College's Instagram page">
+					<div class="icon">
+						<a href="#" aria-label="Go to Juno College's Instagram page">
 							<i aria-hidden class="fa-solid fa-camera"></i>
-						</a></div>
+						</a>
+					</div>
 					<div class="item-text">
 						<a href="#">
 							<h4>top picks</h4>
@@ -86,9 +104,11 @@
 					</div>
 				</div><!-- .item end -->
 				<div class="item">
-					<div class="icon"><a href="#" aria-label="Go to Juno College's Instagram page">
+					<div class="icon">
+						<a href="#" aria-label="Go to Juno College's Instagram page">
 							<i aria-hidden class="fa-solid fa-users"></i>
-						</a></div>
+						</a>
+					</div>
 					<div class="item-text">
 						<a href="#">
 							<h4>community</h4>
@@ -99,9 +119,11 @@
 					</div>
 				</div><!-- .item end -->
 				<div class="item">
-					<div class="icon"><a href="./blog.html" aria-label="Go to Juno College's Instagram page">
+					<div class="icon">
+						<a href="./blog.html" aria-label="Go to Juno College's Instagram page">
 							<i aria-hidden class="fa-solid fa-file"></i>
-						</a></div>
+						</a>
+					</div>
 					<div class="item-text">
 						<a href="./blog.html">
 							<h4>blog</h4>
@@ -112,9 +134,11 @@
 					</div>
 				</div><!-- .item end -->
 				<div class="item">
-					<div class="icon"><a href="./contact.html" aria-label="Go to Juno College's Instagram page">
+					<div class="icon">
+						<a href="./contact.html" aria-label="Go to Juno College's Instagram page">
 							<i aria-hidden class="fa-solid fa-phone-flip"></i>
-						</a></div>
+						</a>
+					</div>
 					<div class="item-text">
 						<a href="./contact.html">
 							<h4>get in touch</h4>
@@ -129,8 +153,10 @@
 		</section><!-- .details end -->
 		<section class="profile">
 			<div class="wrapper">
-				<div class="profile-img img-container"><img src="./assets/small-box.jpg"
-						alt="A Captured client sitting on the side of a mountain with their camera"></div>
+				<div class="profile-img img-container">
+					<img src="./assets/small-box.jpg"
+						alt="A Captured client sitting on the side of a mountain with their camera">
+				</div>
 				<div class="profile-text">
 					<h2>this month's profile</h2>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus in voluptate exercitationem
@@ -144,12 +170,16 @@
 		</section><!-- .profile end -->
 		<section class="gallery">
 			<div class="wrapper">
-				<div class="gallery-img img-container"><img src="./assets/gallery-image-1.jpg"
-						alt="A camera on a stand with the display side facing"></div>
-				<div class="gallery-img img-container"><img src="./assets/gallery-image-2.jpg"
-						alt="A classic camera covered with some plant material"></div>
-				<div class="gallery-img img-container"><img src="./assets/gallery-image-3.jpg"
-						alt="A Nikon camera sitting on a product shelf next to other cameras"></div>
+				<div class="gallery-img img-container">
+					<img src="./assets/gallery-image-1.jpg" alt="A camera on a stand with the display side facing">
+				</div>
+				<div class="gallery-img img-container">
+					<img src="./assets/gallery-image-2.jpg" alt="A classic camera covered with some plant material">
+				</div>
+				<div class="gallery-img img-container">
+					<img src="./assets/gallery-image-3.jpg"
+						alt="A Nikon camera sitting on a product shelf next to other cameras">
+				</div>
 			</div><!-- .wrapper end -->
 		</section><!-- .gallery end -->
 	</main>

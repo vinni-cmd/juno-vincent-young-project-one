@@ -72,6 +72,10 @@ body {
 //   }
 // }
 
+*:focus {
+    outline: none;
+}
+
 button {
     background-color: transparent;
     border: none;

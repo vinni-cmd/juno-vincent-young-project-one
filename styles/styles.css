@@ -321,6 +321,10 @@ body {
   text-transform: uppercase;
 }
 
+*:focus {
+  outline: none;
+}
+
 button {
   background-color: transparent;
   border: none;
@@ -637,6 +641,12 @@ header h1 {
   display: flex;
   gap: 1em;
 }
+.details .wrapper .item .item-text a {
+  border-bottom: 4px solid rgba(0, 0, 0, 0);
+}
+.details .wrapper .item .item-text a:focus, .details .wrapper .item .item-text a:hover {
+  border-bottom: 4px solid #fdfa69;
+}
 .details .icon a {
   width: 4rem;
   background-color: #4ceea7;
@@ -651,6 +661,10 @@ header h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.details .icon a:focus, .details .icon a:hover {
+  color: #fdfa69;
+  background-color: #2c2c2c;
 }
 .details .banner-img {
   height: 50vh;
