@@ -23,6 +23,15 @@ header {
         right: 0;
         left: 0;
         text-align: center;
-        background-color: rgba(255, 255, 255, 0.4)
-;    }
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+}
+
+// contact-pagestyles
+.contact-header {
+    background-image: url(../../assets/contact-header.jpg);
+    min-height: 50vh;
+    h1 {
+        bottom: 50%;
+    }
 }
