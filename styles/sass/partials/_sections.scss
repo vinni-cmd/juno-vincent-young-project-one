@@ -35,7 +35,7 @@
         flex-direction: column;
         .gear-text {
             align-self: flex-end;
-            max-width: min(90vw, (1000px - 4em) / 2);
+            max-width: min(90vw, (1200px - 4em) / 2);
             :nth-child(odd) {
                 text-align: right;
             }
@@ -50,7 +50,7 @@
     .skills {
         flex-direction: column-reverse;
         .skills-text {
-            max-width: min(90vw, (1000px - 4em) / 2) ;
+            max-width: min(90vw, (1200px - 4em) / 2) ;
             padding-right: 1em;
         }
         .skills-img {
@@ -236,5 +236,78 @@ main.contact-main {
         text-transform: uppercase;
         letter-spacing: 0.11rem;
         padding-bottom: 1em;
+    }
+}
+
+// blog page
+
+main.blog-main {
+    background-color: $primary-bgc;
+    padding: $section-padding;
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 3em;
+        @media (max-width: 1100px) {
+        flex-direction: column-reverse;
+        align-items: center;
+        }
+        aside {
+            max-width: 480px;
+            .img-container {
+               
+            }
+            .aside-text {
+                background-color: $secondary-bgc;
+                padding: 1em;
+                .about-snippet{
+                    max-width: max-content;
+                    h3 {
+                        width: max-content;
+                    }
+                }
+                .recent-posts {
+                    margin-top: 3em;
+                }
+                ul li {
+                    line-height: 3.2rem;
+                    &::before {
+                    content: "- ";
+                    color: $primary-ac;
+                    }
+                }
+            }
+        }
+        .blog-section {
+            max-width: 80vw;
+            .blog-post {
+                border: 4px solid $secondary-ac;
+                border-right: none;
+                padding-left: 1.5em;
+                .blog-img {
+                    position: relative;
+                    top: -150px;
+                    box-shadow: -1.5em 1.5em 0 0 $secondary-ac;
+                }
+                h2 {
+                    margin: 1em 0;
+                }
+            }
+            .comments-section .comment {
+                display: flex;
+                gap: 1em;
+                padding: 2em 0;
+                .visitor-img {
+                    flex-shrink: 0;
+                    // Actual image size is really small resulting in pixelated look when flex-direction for parent changes to column.
+                    @media (max-width: 500px) {
+                    display: none;
+                    }
+                }
+                p {
+                    margin-top: 0;
+                }
+            }
+        }
     }
 }

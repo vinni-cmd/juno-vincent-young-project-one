@@ -35,3 +35,13 @@ header {
         bottom: 50%;
     }
 }
+
+// blog-page
+
+.blog-header {
+    background-image: url(../../assets/blog-header.jpg);
+    height: min(100vh, 480px);
+    h1 {
+        bottom: 50%;
+    }
+}
