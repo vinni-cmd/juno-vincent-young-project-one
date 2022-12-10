@@ -42,86 +42,97 @@
             <h1 class="page-header">blog</h1>
         </div><!-- .wrapper end -->
     </header>
-    <main>
-        <aside>
-            <div class="img-container">
-                <img src="./assets/side-blog-image.jpg"
-                    alt="A camera lens suspended above someone's hand with a lake and blue sky as the background">
-            </div>
-            <div class="about-snippet">
-                <h3>about captured</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum exercitationem architecto ex!<a
-                        href="./index.html#about">Find out more.</a></p>
-            </div>
-            <div class="recent-posts">
-                <h3>recent posts</h3>
-                <ul>
-                    <li><a href="#">Lorem ipsum dolor sit.</a></li>
-                    <li><a href="#">Lorem ipsum dolor sit.</a></li>
-                    <li><a href="#">Lorem ipsum dolor sit.</a></li>
-                    <li><a href="#">Lorem ipsum dolor sit.</a></li>
-                </ul>
-            </div>
-        </aside>
-        <section class="blog-section">
-            <article class="blog-post">
+    <main class="blog-main">
+        <div class="wrapper">
+            <aside>
                 <div class="img-container">
-                    <img src="./assets/blog-post-image.jpg"
-                        alt="A photographer sitting in a field of seeding dandelions at sunset">
+                    <img src="./assets/side-blog-image.jpg"
+                        alt="A camera lens suspended above someone's hand with a lake and blue sky as the background">
                 </div>
-                <h2>finding great locations</h2>
-                <p>Monday May 4th, 2019 by Dieula</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident rem iusto pariatur sit
-                    praesentium perspiciatis quo similique alias odit at? Commodi quas labore vero. Sunt iusto, officia
-                    dolorem, vero consequuntur nesciunt accusamus quibusdam recusandae dolorum aspernatur fugit aliquam,
-                    modi dolor sequi! Nihil ipsum voluptatum eius, esse a corrupti omnis quisquam neque repellat eos,
-                    qui nam maiores non! Enim minus assumenda porro quia tenetur. Perspiciatis nihil vero earum minima
-                    sint fugiat, tempore laborum quisquam assumenda veniam obcaecati eius eum exercitationem quidem
-                    maxime illo aliquam quod ad recusandae. Beatae, corporis. Cupiditate cumque harum eligendi,
-                    praesentium rem reiciendis atque iure deserunt at eos. Fugit officiis veniam esse provident ex.
-                    Dignissimos, veniam dolore at expedita sapiente ducimus dolor obcaecati, ut ea quidem dolorem, totam
-                    quia nisi.</p>
-            </article>
-            <div class="comments-section">
-                <h3>comments:</h3>
-                <article class="comment">
-                    <div class="visitor-img">
-                        <img src="./assets/comment-1.jpg" alt="Jeremy's profile picture">
+                <div class="aside-text">
+                    <div class="about-snippet">
+                        <h3>about captured</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum exercitationem architecto
+                            ex!<a href="./index.html#about">Find out more.</a></p>
                     </div>
-                    <div class="visitor-commment">
-                        <p>Tuesday October 9th, 2018 by Jeremy</p>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora unde esse quos, modi iure
-                            fugit incidunt nobis dicta dolor voluptates neque fuga laudantium, excepturi explicabo,
-                            mollitia est nulla. Itaque corporis, beatae perferendis debitis omnis facilis quasi
-                            voluptates neque?</p>
+                    <div class="recent-posts">
+                        <h3>recent posts</h3>
+                        <ul>
+                            <li><a href="#">Lorem ipsum dolor sit.</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit.</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit.</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit.</a></li>
+                        </ul>
                     </div>
+                </div>
+            </aside>
+            <section class="blog-section">
+                <article class="blog-post">
+                    <div class="blog-img">
+                        <img src="./assets/blog-post-image.jpg"
+                            alt="A photographer sitting in a field of seeding dandelions at sunset">
+                    </div>
+                    <h2>finding great locations</h2>
+                    <p>Monday May 4th, 2019 by Dieula</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident rem iusto pariatur sit
+                        praesentium perspiciatis quo similique alias odit at? Commodi quas labore vero. Sunt iusto,
+                        officia
+                        dolorem, vero consequuntur nesciunt accusamus quibusdam recusandae dolorum aspernatur fugit
+                        aliquam,
+                        modi dolor sequi! Nihil ipsum voluptatum eius, esse a corrupti omnis quisquam neque repellat
+                        eos,
+                        qui nam maiores non! Enim minus assumenda porro quia tenetur. Perspiciatis nihil vero earum
+                        minima
+                        sint fugiat, tempore laborum quisquam assumenda veniam obcaecati eius eum exercitationem quidem
+                        maxime illo aliquam quod ad recusandae. Beatae, corporis. Cupiditate cumque harum eligendi,
+                        praesentium rem reiciendis atque iure deserunt at eos. Fugit officiis veniam esse provident ex.
+                        Dignissimos, veniam dolore at expedita sapiente ducimus dolor obcaecati, ut ea quidem dolorem,
+                        totam
+                        quia nisi.</p>
                 </article>
-                <article class="comment">
-                    <div class="visitor-img">
-                        <img src="./assets/comment-2.jpg" alt="Jeremy's profile picture">
-                    </div>
-                    <div class="visitor-commment">
-                        <p>Wednesday October 10th, 2018 by Julia</p>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora unde esse quos, modi iure
-                            fugit incidunt nobis dicta dolor voluptates neque fuga laudantium, excepturi explicabo,
-                            mollitia est nulla. Itaque corporis, beatae perferendis debitis omnis facilis quasi
-                            voluptates neque?</p>
-                    </div>
-                </article>
-                <form action="#" method="post" class="comment-form">
-                    <fieldset class="user-details">
-                        <label for="user-name" class="sr-only">Name</label>
-                        <input type="text" id="user-name" placeholder="Name" required>
-                        <label for="user-email" class="sr-only">Email</label>
-                        <input type="email" id="user-email" placeholder="Email address" required>
-                    </fieldset>
-                    <label for="user-message" class="sr-only">Comment</label>
-                    <textarea name="message" id="user-message" cols="30" rows="10" placeholder="Message"
-                        required></textarea>
-                    <button type="submit">post comment</button>
-                </form>
-            </div> <!-- .comments-section end-->
-        </section><!-- .blog-section end -->
+                <div class="comments-section">
+                    <h3>comments:</h3>
+                    <article class="comment">
+                        <div class="visitor-img">
+                            <img src="./assets/comment-1.jpg" alt="Jeremy's profile picture">
+                        </div>
+                        <div class="visitor-commment">
+                            <p>Tuesday October 9th, 2018 by Jeremy</p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora unde esse quos, modi
+                                iure
+                                fugit incidunt nobis dicta dolor voluptates neque fuga laudantium, excepturi explicabo,
+                                mollitia est nulla. Itaque corporis, beatae perferendis debitis omnis facilis quasi
+                                voluptates neque?</p>
+                        </div>
+                    </article>
+                    <article class="comment">
+                        <div class="visitor-img">
+                            <img src="./assets/comment-2.jpg" alt="Jeremy's profile picture">
+                        </div>
+                        <div class="visitor-commment">
+                            <p>Wednesday October 10th, 2018 by Julia</p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora unde esse quos, modi
+                                iure
+                                fugit incidunt nobis dicta dolor voluptates neque fuga laudantium, excepturi explicabo,
+                                mollitia est nulla. Itaque corporis, beatae perferendis debitis omnis facilis quasi
+                                voluptates neque?</p>
+                        </div>
+                    </article>
+                    <form action="#" method="post" class="comment-form">
+                        <fieldset class="user-details">
+                            <label for="user-name" class="sr-only">Name</label>
+                            <input type="text" id="user-name" placeholder="Name" required>
+                            <label for="user-email" class="sr-only">Email</label>
+                            <input type="email" id="user-email" placeholder="Email address" required>
+                        </fieldset>
+                        <label for="user-message" class="sr-only">Comment</label>
+                        <textarea name="message" id="user-message" cols="30" rows="10" placeholder="Comment"
+                            required></textarea>
+                        <button type="submit">post comment</button>
+                    </form>
+                </div> <!-- .comments-section end-->
+            </section><!-- .blog-section end -->
+        </div> <!-- .wrapper end -->
     </main>
     <footer>
         <p>Copyright &copy 2018 HackerYou</p>

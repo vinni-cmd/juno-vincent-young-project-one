@@ -15,6 +15,7 @@ h1, h2, h3, h4 {
   font-family: $heading-ff;
   text-transform: uppercase;
   margin: 0;
+  width: max-content;
 }
 
 h1 {

@@ -35,7 +35,7 @@
         flex-direction: column;
         .gear-text {
             align-self: flex-end;
-            max-width: min(90vw, (1000px - 4em) / 2);
+            max-width: min(90vw, (1200px - 4em) / 2);
             :nth-child(odd) {
                 text-align: right;
             }
@@ -50,7 +50,7 @@
     .skills {
         flex-direction: column-reverse;
         .skills-text {
-            max-width: min(90vw, (1000px - 4em) / 2) ;
+            max-width: min(90vw, (1200px - 4em) / 2) ;
             padding-right: 1em;
         }
         .skills-img {
@@ -237,4 +237,43 @@ main.contact-main {
         letter-spacing: 0.11rem;
         padding-bottom: 1em;
     }
+}
+
+// blog page
+
+main.blog-main {
+    background-color: $primary-bgc;
+    padding: $section-padding;
+    .wrapper {
+        display: flex;
+        gap: 3em;
+        @media (max-width: 1000px) {
+        flex-direction: column-reverse;
+        }
+        aside {
+            .aside-text {
+                background-color: $secondary-bgc;
+                padding: 1em;
+                .recent-posts {
+                    margin-top: 3em;
+                }
+                ul li {
+                    line-height: 3.2rem;
+                    &::before {
+                    content: "- ";
+                    color: $primary-ac;
+                    }
+                }
+            }
+        }
+        .blog-section {
+        }
+    }
+    // .aside-text {
+    //     margin-left: max(5vh, (100vh - 1200px)/2); 
+    // }
+    // .comments-section, 
+    // .blog-post > *:not(.blog-img){
+    //     margin-right: max(5vh, (100vh - 1200px)/2)
+    // }
 }
