@@ -806,92 +806,89 @@ main.contact-main .wrapper {
   padding-bottom: 1em;
 }
 
-main.blog-main {
-  background-color: #effdf3;
-  padding: 4em 0 4em;
-}
-main.blog-main .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 3em;
-}
-@media (max-width: 1100px) {
-  main.blog-main .wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-main.blog-main .wrapper aside {
-  max-width: 480px;
-}
-main.blog-main .wrapper aside .aside-text {
-  background-color: #fafafa;
-  padding: 1em;
-}
-main.blog-main .wrapper aside .aside-text .about-snippet {
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
-}
-main.blog-main .wrapper aside .aside-text .about-snippet h3 {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-}
-main.blog-main .wrapper aside .aside-text .recent-posts {
-  margin-top: 3em;
-}
-main.blog-main .wrapper aside .aside-text ul li {
-  line-height: 3.2rem;
-}
-main.blog-main .wrapper aside .aside-text ul li::before {
-  content: "- ";
-  color: #4ceea7;
-}
-main.blog-main .wrapper .blog-section {
-  max-width: 80vw;
-}
-main.blog-main .wrapper .blog-section .blog-post {
-  border: 4px solid #fdfa69;
-  border-right: none;
-  padding-left: 1.5em;
-}
-main.blog-main .wrapper .blog-section .blog-post .blog-img {
-  position: relative;
-  top: -150px;
-  -webkit-box-shadow: -1.5em 1.5em 0 0 #fdfa69;
-          box-shadow: -1.5em 1.5em 0 0 #fdfa69;
-}
-main.blog-main .wrapper .blog-section .blog-post h2 {
-  margin: 1em 0;
-}
-main.blog-main .wrapper .blog-section .comments-section .comment {
+main.blog-main .comments-section .comment {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 1em;
   padding: 2em 0;
 }
-main.blog-main .wrapper .blog-section .comments-section .comment .visitor-img {
+main.blog-main .comments-section .comment .visitor-img {
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 @media (max-width: 500px) {
-  main.blog-main .wrapper .blog-section .comments-section .comment .visitor-img {
+  main.blog-main .comments-section .comment .visitor-img {
     display: none;
   }
 }
-main.blog-main .wrapper .blog-section .comments-section .comment p {
+main.blog-main .comments-section .comment p {
   margin-top: 0;
+}
+
+.blog-container {
+  background-color: #effdf3;
+  padding: 4em 0 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 3em;
+}
+.blog-container aside,
+.blog-container .major-blog-unit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.blog-container aside .aside-text {
+  background-color: #fafafa;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  max-width: min(90vw, (1200px - 3em) / 3);
+  padding-left: 1em;
+}
+.blog-container aside .aside-text .about-snippet {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+.blog-container aside .aside-text .about-snippet h3 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.blog-container aside .aside-text .recent-posts {
+  margin-top: 3em;
+}
+.blog-container aside .aside-text ul li {
+  line-height: 3.2rem;
+}
+.blog-container aside .aside-text ul li::before {
+  content: "- ";
+  color: #4ceea7;
+}
+.blog-container aside .img-container {
+  -webkit-box-shadow: 1.5em 1.5em 0 0 #fdfa69;
+          box-shadow: 1.5em 1.5em 0 0 #fdfa69;
+  position: relative;
+  top: -100px;
+}
+.blog-container .major-blog-unit .blog-text {
+  max-width: min(90vw, (1200px - 4em) * 0.6666);
+  padding-right: 1em;
+}
+.blog-container .major-blog-unit .blog-img {
+  -webkit-box-shadow: -1.5em 1.5em 0 0 #fdfa69;
+          box-shadow: -1.5em 1.5em 0 0 #fdfa69;
+  position: relative;
+  top: -150px;
 }
 
 footer {
