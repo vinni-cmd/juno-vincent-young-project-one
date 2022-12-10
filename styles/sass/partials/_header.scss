@@ -40,7 +40,7 @@ header {
 
 .blog-header {
     background-image: url(../../assets/blog-header.jpg);
-    min-height: 50vh;
+    height: min(100vh, 480px);
     h1 {
         bottom: 50%;
     }
