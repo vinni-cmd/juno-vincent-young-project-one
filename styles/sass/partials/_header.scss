@@ -25,20 +25,21 @@ header {
     }
 }
 
-// contact-page
-.contact-header {
-    background-image: url(../../assets/contact-header.jpg);
+// secondary pages
+.contact-header,
+.blog-header {
     min-height: 50vh;
     h1 {
         bottom: 50%;
     }
 }
 
+// contact-page
+.contact-header {
+    background-image: url(../../assets/contact-header.jpg);
+}
+
 // blog-page
 .blog-header {
     background-image: url(../../assets/blog-header.jpg);
-    height: min(100vh, 480px);
-    h1 {
-        bottom: 50%;
-    }
 }

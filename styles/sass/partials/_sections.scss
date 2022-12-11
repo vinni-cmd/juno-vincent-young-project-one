@@ -48,7 +48,7 @@
     .skills {
         flex-direction: column-reverse;
         .skills-text {
-            max-width: min(90vw, (1200px - 4em) / 2) ;
+            max-width: min(90vw, (1200px - 4em) / 2);
             padding-right: 1em;
         }
         .skills-img {
@@ -58,23 +58,23 @@
         }
     }
     @media (max-width: 800px) {
+        flex-direction: column;
+        gap: 1em;
+        .gear,
+        .skills {
             flex-direction: column;
-            gap: 1em;
-            .gear,
-            .skills {
-                flex-direction: column;
-                gap: 2em;
-                .gear-img,
-                .skills-img {
-                    position: static;
-                    width: max(50%, 300px);
-                }
-                .gear-text,
-                .skills-text {
-                    max-width: 100%;
-                    padding: 0 10vw 0;
-                }
+            gap: 2em;
+            .gear-img,
+            .skills-img {
+                position: static;
+                width: max(50%, 300px);
             }
+            .gear-text,
+            .skills-text {
+                max-width: 100%;
+                padding: 0 10vw 0;
+            }
+        }
     }
     @media (max-width: 500px) {
         .gear,
@@ -84,11 +84,11 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                & > * {
+                &>* {
                     text-align: center;
                 }
                 :nth-child(odd) {
-                text-align: center;
+                    text-align: center;
                 }
             }
         }
@@ -103,8 +103,8 @@
         display: flex;
         flex-wrap: wrap;
         @media (max-width: 800px) {
-            flex-direction: column;    
-            flex-wrap: nowrap;     
+            flex-direction: column;
+            flex-wrap: nowrap;
         }
         .item {
             flex-basis: 50%;
@@ -175,7 +175,7 @@
 }
 
 // contact-page
-main.contact-main {
+.contact-main {
     background-color: $primary-bgc;
     min-height: 45vh;
     padding: $section-padding;
@@ -185,7 +185,7 @@ main.contact-main {
         justify-content: space-between;
         gap: 4em;
         @media (max-width: 1200px) {
-            flex-direction: column-reverse;            
+            flex-direction: column-reverse;
         }
     }
 }
@@ -212,27 +212,27 @@ main.contact-main {
 
 // blog page
 main.blog-main {
-        background-color: $primary-bgc;
-        @media (max-width: 1000px) {
-            display: flex;
-            justify-content: center;
-        }
-            .comments-section .comment {
-                display: flex;
-                gap: 1em;
-                padding: 2em 0;
-                .visitor-img {
-                    flex-shrink: 0;
-                    // Actual image size is really small resulting in pixelated look when flex-direction for parent changes to column.
-                    @media (max-width: 500px) {
-                    display: none;
-                    }
-                }
-                p {
-                    margin-top: 0;
-                }
-            }
+    background-color: $primary-bgc;
+    @media (max-width: 1000px) {
+        display: flex;
+        justify-content: center;
     }
+    .comments-section .comment {
+        display: flex;
+        gap: 1em;
+        padding: 2em 0;
+        .visitor-img {
+            flex-shrink: 0;
+            // Actual image size is really small resulting in pixelated look when flex-direction for parent changes to column.
+            @media (max-width: 500px) {
+                display: none;
+            }
+        }
+        p {
+            margin-top: 0;
+        }
+    }
+}
 
 .blog-container {
     padding: $section-padding;
@@ -261,7 +261,7 @@ main.blog-main {
             @media (max-width: 1000px) {
                 align-self: center;
             }
-            .about-snippet{
+            .about-snippet {
                 max-width: max-content;
                 h3 {
                     width: max-content;
@@ -277,8 +277,8 @@ main.blog-main {
             ul li {
                 line-height: 3.2rem;
                 &::before {
-                content: "- ";
-                color: $primary-ac;
+                    content: "- ";
+                    color: $primary-ac;
                 }
             }
         }
@@ -290,7 +290,7 @@ main.blog-main {
     }
     .major-blog-unit {
         .blog-text {
-            max-width: min(90vw, (1200px - 4em) * 0.6666) ;
+            max-width: min(90vw, (1200px - 4em) * 0.6666);
             padding-right: 1em;
         }
         .blog-img {

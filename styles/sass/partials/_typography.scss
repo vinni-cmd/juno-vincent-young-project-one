@@ -1,7 +1,7 @@
 @use "variables" as *;
 
 html {
-//   setting default text size to 10px. 1 rem = 10px
+  //   setting default text size to 10px. 1 rem = 10px
   font-size: 62.5%;
 }
 
@@ -11,18 +11,23 @@ body {
   color: $primary-fc;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: $heading-ff;
   text-transform: uppercase;
   margin: 0;
 }
 
 h1 {
-    // adding the rem value to the vw value is needed to make the fs responsive to zooming in/out on the browser 
+  // The style guide size is used as the maximum allowed value
+  // adding the rem value to the vw value is needed to make the fs responsive to zooming in/out on the browser 
   font-size: clamp(5rem, 10vw + 1rem, 13.8rem);
 }
 
 h1.secondary-page-header {
+  // The style guide size is used as the maximum allowed value
   font-size: clamp(4rem, 10vw + 1rem, 8rem)
 }
 
@@ -31,12 +36,14 @@ h2 {
   letter-spacing: 0.1rem;
 }
 
-h3, h4{
+h3,
+h4 {
   font-size: 3.2rem;
   letter-spacing: 0.1rem;
 }
 
 .blog-main h3 {
+  // The style guide size is used as the maximum allowed value
   font-size: clamp(2rem, 5vw + 1rem, 3.2rem);
 }
 
@@ -44,7 +51,10 @@ p {
   line-height: 3.2rem;
 }
 
-input, textarea, input::placeholder, textarea::placeholder {
+input,
+textarea,
+input::placeholder,
+textarea::placeholder {
   line-height: 3.2rem;
   font-family: inherit;
   color: $primary-fc;
