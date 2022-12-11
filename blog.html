@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captured Contact</title>
+    <!-- CSS, font and icon style links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Roboto&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/2c6cdcd39c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/styles.css">
-    <title>Captured Contact</title>
 </head>
 
 <body>
@@ -20,11 +21,13 @@
             <nav>
                 <ul>
                     <!-- should not be using aria hidden here. It does not quite work for focusable elements -->
+                    <!-- Mobile slide-out nav button-->
                     <li aria-hidden="true">
                         <button>
                             <i class="fa-solid fa-bars"></i>
                         </button>
                     </li>
+                    <!-- Navigation links -->
                     <li class="mobile-hidden">
                         <a href="./index.html#home">home</a>
                     </li>
@@ -39,13 +42,14 @@
                     </li>
                 </ul>
             </nav>
-            <h1 class="page-header">blog</h1>
+            <h1 class="secondary-page-header">blog</h1>
         </div><!-- .wrapper end -->
     </header>
     <main class="blog-main">
         <section class="blog-container">
+            <!-- secondary info to compliment main blog section -->
             <aside>
-                <div class="img-container">
+                <div class="aside-img">
                     <img src="./assets/side-blog-image.jpg"
                         alt="A camera lens suspended above someone's hand with a lake and blue sky as the background">
                 </div>
@@ -54,9 +58,7 @@
                         <h3>about captured</h3>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum exercitationem architecto
                             ex!
-                            <a href="./index.html#about" class="simple-link">
-                                <span class="minor-link">Find out more.</span>
-                            </a>
+                            <a href="./index.html#about" class="simple-link minor-link">Find out more.</a>
                         </p>
                     </div>
                     <div class="recent-posts">
@@ -78,13 +80,14 @@
                     </div>
                 </div> <!-- .aside-text end -->
             </aside>
+            <!-- main feature of blog page -->
             <article class="major-blog-unit">
                 <div class="blog-img">
                     <img src="./assets/blog-post-image.jpg"
                         alt="A photographer sitting in a field of seeding dandelions at sunset">
                 </div>
                 <div class="blog-text">
-                    <article class="blog-post">
+                    <article>
                         <h2>finding great locations</h2>
                         <p>Monday May 4th, 2019 by Dieula</p>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident rem iusto pariatur sit

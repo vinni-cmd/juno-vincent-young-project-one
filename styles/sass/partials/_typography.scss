@@ -15,7 +15,6 @@ h1, h2, h3, h4 {
   font-family: $heading-ff;
   text-transform: uppercase;
   margin: 0;
-  // width: max-content;
 }
 
 h1 {
@@ -23,7 +22,7 @@ h1 {
   font-size: clamp(5rem, 10vw + 1rem, 13.8rem);
 }
 
-h1.page-header {
+h1.secondary-page-header {
   font-size: clamp(4rem, 10vw + 1rem, 8rem)
 }
 
@@ -37,7 +36,7 @@ h3, h4{
   letter-spacing: 0.1rem;
 }
 
-main.blog-main h3 {
+.blog-main h3 {
   font-size: clamp(2rem, 5vw + 1rem, 3.2rem);
 }
 

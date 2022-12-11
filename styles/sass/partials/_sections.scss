@@ -1,7 +1,6 @@
 @use "variables" as *;
 
 // about section
-
 .about {
     background-color: $primary-bgc;
     padding: $section-padding;
@@ -18,7 +17,6 @@
 }
 
 // services section
-
 .services {
     background-color: $secondary-bgc;
     padding: $section-padding;
@@ -97,9 +95,7 @@
     }
 }
 
-
 // details section
-
 .details {
     background-color: $primary-bgc;
     padding: $section-padding;
@@ -132,9 +128,7 @@
     }
 }
 
-
 // profile section
-
 .profile {
     background-color: $primary-bgc;
     padding: $section-padding;
@@ -166,7 +160,6 @@
 }
 
 // gallery section
-
 .gallery {
     padding: $section-padding;
     background-color: $secondary-bgc;
@@ -182,7 +175,6 @@
 }
 
 // contact-page
-
 main.contact-main {
     background-color: $primary-bgc;
     min-height: 45vh;
@@ -219,27 +211,12 @@ main.contact-main {
 }
 
 // blog page
-
 main.blog-main {
         background-color: $primary-bgc;
         @media (max-width: 1000px) {
             display: flex;
             justify-content: center;
         }
-        // .blog-section {
-            // max-width: 80vw;
-            // .blog-post {
-            //     border: 4px solid $secondary-ac;
-            //     border-right: none;
-            //     padding-left: 1.5em;
-            //     .blog-img {
-            //         position: relative;
-
-            //     }
-            //     h2 {
-            //         margin: 1em 0;
-            //     }
-            // }
             .comments-section .comment {
                 display: flex;
                 gap: 1em;
@@ -255,9 +232,7 @@ main.blog-main {
                     margin-top: 0;
                 }
             }
-        // }
     }
-
 
 .blog-container {
     padding: $section-padding;
@@ -307,14 +282,13 @@ main.blog-main {
                 }
             }
         }
-        .img-container {
+        .aside-img {
             box-shadow: 1.5em 1.5em 0 0 $secondary-ac;
             position: relative;
             top: -100px;
         }
     }
     .major-blog-unit {
-        // flex-basis: 60%;
         .blog-text {
             max-width: min(90vw, (1200px - 4em) * 0.6666) ;
             padding-right: 1em;
@@ -325,40 +299,4 @@ main.blog-main {
             top: -150px;
         }
     }
-    // @media (max-width: 800px) {
-    //         flex-direction: column;
-    //         gap: 1em;
-    //         .gear,
-    //         .skills {
-    //             flex-direction: column;
-    //             gap: 2em;
-    //             .gear-img,
-    //             .skills-img {
-    //                 position: static;
-    //                 width: max(50%, 300px);
-    //             }
-    //             .gear-text,
-    //             .skills-text {
-    //                 max-width: 100%;
-    //                 padding: 0 10vw 0;
-    //             }
-    //         }
-    // }
-    // @media (max-width: 500px) {
-    //     .gear,
-    //     .skills {
-    //         .gear-text,
-    //         .skills-text {
-    //             display: flex;
-    //             flex-direction: column;
-    //             align-items: center;
-    //             & > * {
-    //                 text-align: center;
-    //             }
-    //             :nth-child(odd) {
-    //             text-align: center;
-    //             }
-    //         }
-    //     }
-    // }
 }

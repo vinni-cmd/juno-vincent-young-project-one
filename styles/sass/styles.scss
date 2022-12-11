@@ -7,18 +7,4 @@
 @use "./partials/sections";
 @use "./partials/footer";
 @use "./partials/forms";
-@use "./partials/media-queries";
-
-// example of how to make padding and margin on a element more responsive
-// .para {
-//     padding: max(3vh, 1rem) 1.5rem;
-//     margin-bottom: max(5vh, 2rem); 
-// }
-
-// only set clamp on major header(s)
-// stick to rem for smaller text
-// .h2 {
-//     font-size: clamp(3.5rem, 12vw + 1rem, 8rem);
-//     line-height: 1;
-// }
 
