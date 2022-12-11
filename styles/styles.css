@@ -945,6 +945,11 @@ footer p {
     position: static;
   }
 }
+@media (max-width: 500px) {
+  .contact-form {
+    padding: 0;
+  }
+}
 .contact-form form {
   display: -webkit-box;
   display: -ms-flexbox;

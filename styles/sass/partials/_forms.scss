@@ -10,6 +10,10 @@
     @media (max-width: 1200px) {
             position: static;
         }
+    @media (max-width: 500px) {
+        // Gets rid of horizontal scroll at 320px
+        padding: 0;        
+    }
     form {
     display: flex;
     flex-direction: column;
