@@ -92,20 +92,29 @@ a {
     &:hover {
         cursor: pointer;
     }
-    &.button {
+    &.button,
+    &.round-button {
         background-color: $primary-ac;
+        transition: all 0.3s linear;
+        &:hover,
+        &:focus {
+            background-color: $primary-fc;
+            color: $primary-ac;
+        }
+    }
+    &.button {
         padding: 0.55em 0.75em;
         font-family: $heading-ff;
         line-height: 3.2rem;
         letter-spacing: 0.1rem;
         text-transform: uppercase;
         text-align: center;
-        transition: 0.3s;
+    }
+    &.simple-link {
+        transition: all 0.3s linear;
         &:hover,
         &:focus {
-            background-color: $primary-fc;
             color: $primary-ac;
-            outline: none;
         }
     }
 }
