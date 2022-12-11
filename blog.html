@@ -53,18 +53,30 @@
                     <div class="about-snippet">
                         <h3>about captured</h3>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum exercitationem architecto
-                            ex!<a href="./index.html#about">Find out more.</a></p>
+                            ex!
+                            <a href="./index.html#about" class="simple-link">
+                                <span class="minor-link">Find out more.</span>
+                            </a>
+                        </p>
                     </div>
                     <div class="recent-posts">
                         <h3>recent posts</h3>
                         <ul>
-                            <li><a href="#">Lorem ipsum dolor sit.</a></li>
-                            <li><a href="#">Lorem ipsum dolor sit.</a></li>
-                            <li><a href="#">Lorem ipsum dolor sit.</a></li>
-                            <li><a href="#">Lorem ipsum dolor sit.</a></li>
+                            <li>
+                                <a href="#" class="simple-link">Lorem ipsum dolor sit.</a>
+                            </li>
+                            <li>
+                                <a href="#" class="simple-link">Lorem ipsum dolor sit.</a>
+                            </li>
+                            <li>
+                                <a href="#" class="simple-link">Lorem ipsum dolor sit.</a>
+                            </li>
+                            <li>
+                                <a href="#" class="simple-link">Lorem ipsum dolor sit.</a>
+                            </li>
                         </ul>
                     </div>
-                </div>
+                </div> <!-- .aside-text end -->
             </aside>
             <article class="major-blog-unit">
                 <div class="blog-img">
@@ -93,7 +105,7 @@
                             dolorem,
                             totam
                             quia nisi.</p>
-                    </article>
+                    </article> <!-- .blog-post end -->
                     <div class="comments-section">
                         <h3>comments:</h3>
                         <article class="comment">
@@ -109,8 +121,8 @@
                                     explicabo,
                                     mollitia est nulla. Itaque corporis, beatae perferendis debitis omnis facilis quasi
                                     voluptates neque?</p>
-                            </div>
-                        </article>
+                            </div> <!-- .visitor-commment end -->
+                        </article> <!-- .comment end -->
                         <article class="comment">
                             <div class="visitor-img">
                                 <img src="./assets/comment-2.jpg" alt="Jeremy's profile picture">
@@ -124,8 +136,8 @@
                                     explicabo,
                                     mollitia est nulla. Itaque corporis, beatae perferendis debitis omnis facilis quasi
                                     voluptates neque?</p>
-                            </div>
-                        </article>
+                            </div> <!-- .visitor-comment end -->
+                        </article> <!-- .comment-end -->
                         <form action="#" method="post" class="comment-form">
                             <fieldset class="user-details">
                                 <label for="user-name" class="sr-only">Name</label>
@@ -133,17 +145,19 @@
                                 <label for="user-email" class="sr-only">Email</label>
                                 <input type="email" id="user-email" placeholder="Email address" required>
                             </fieldset>
-                            <label for="user-message" class="sr-only">Comment</label>
-                            <textarea name="message" id="user-message" cols="30" rows="10" placeholder="Comment"
+                            <label for="user-comment" class="sr-only">Comment</label>
+                            <textarea name="message" id="user-comment" cols="30" rows="10" placeholder="Comment"
                                 required></textarea>
                             <button type="submit">post comment</button>
                         </form>
-                    </div> <!-- .comments-section end-->>
-                </div><!-- .skills-text end -->
-            </article><!-- .skills end -->
-        </section><!-- .services end -->
+                    </div> <!-- .comments-section end-->
+                </div><!-- .blog-text end -->
+            </article><!-- .major-blog-unit end -->
+        </section><!-- .blog-container end -->
     </main>
     <footer>
         <p>Copyright &copy 2018 HackerYou</p>
     </footer>
 </body>
+
+</html>

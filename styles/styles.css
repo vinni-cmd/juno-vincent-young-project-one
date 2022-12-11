@@ -346,21 +346,29 @@ a {
 a:hover {
   cursor: pointer;
 }
-a.button {
+a.button, a.round-button {
   background-color: #4ceea7;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+a.button:hover, a.button:focus, a.round-button:hover, a.round-button:focus {
+  background-color: #2c2c2c;
+  color: #4ceea7;
+}
+a.button {
   padding: 0.55em 0.75em;
   font-family: "Playfair Display", serif;
   line-height: 3.2rem;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   text-align: center;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
-a.button:hover, a.button:focus {
-  background-color: #2c2c2c;
+a.simple-link {
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+a.simple-link:hover, a.simple-link:focus {
   color: #4ceea7;
-  outline: none;
 }
 
 img {
@@ -653,15 +661,8 @@ header h1 {
   display: flex;
   gap: 1em;
 }
-.details .wrapper .item .item-text a {
-  border-bottom: 4px solid rgba(0, 0, 0, 0);
-}
-.details .wrapper .item .item-text a:focus, .details .wrapper .item .item-text a:hover {
-  border-bottom: 4px solid #fdfa69;
-}
 .details .icon a {
   width: 4rem;
-  background-color: #4ceea7;
   border-radius: 50%;
   padding: 0.5em;
   display: -webkit-box;
@@ -673,10 +674,6 @@ header h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-.details .icon a:focus, .details .icon a:hover {
-  color: #fdfa69;
-  background-color: #2c2c2c;
 }
 .details .banner-img {
   height: 50vh;
@@ -777,14 +774,6 @@ main.contact-main .wrapper {
   }
 }
 
-.contact-details a {
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-}
-.contact-details a:hover, .contact-details a:focus {
-  outline: none;
-  color: #4ceea7;
-}
 .contact-details .social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -806,6 +795,19 @@ main.contact-main .wrapper {
   padding-bottom: 1em;
 }
 
+main.blog-main {
+  background-color: #effdf3;
+}
+@media (max-width: 1000px) {
+  main.blog-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 main.blog-main .comments-section .comment {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -827,7 +829,6 @@ main.blog-main .comments-section .comment p {
 }
 
 .blog-container {
-  background-color: #effdf3;
   padding: 4em 0 4em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -836,6 +837,18 @@ main.blog-main .comments-section .comment p {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 3em;
+}
+@media (max-width: 1000px) {
+  .blog-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    width: 90%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 .blog-container aside,
 .blog-container .major-blog-unit {
@@ -846,6 +859,10 @@ main.blog-main .comments-section .comment p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 90%;
+}
+.blog-container aside {
+  padding: 4em 0 4em;
 }
 .blog-container aside .aside-text {
   background-color: #fafafa;
@@ -853,6 +870,12 @@ main.blog-main .comments-section .comment p {
       align-self: flex-end;
   max-width: min(90vw, (1200px - 3em) / 3);
   padding-left: 1em;
+}
+@media (max-width: 1000px) {
+  .blog-container aside .aside-text {
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
 }
 .blog-container aside .aside-text .about-snippet {
   max-width: -webkit-max-content;
@@ -863,6 +886,10 @@ main.blog-main .comments-section .comment p {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+}
+.blog-container aside .aside-text .about-snippet .minor-link {
+  font-style: italic;
+  font-weight: 800;
 }
 .blog-container aside .aside-text .recent-posts {
   margin-top: 3em;
@@ -952,7 +979,7 @@ footer p {
   background-color: #fafafa;
   border: none;
   border-bottom: 3px solid #4ceea7;
-  max-width: 80vh;
+  width: 100%;
 }
 .contact-form form textarea {
   resize: none;
@@ -1010,7 +1037,7 @@ footer p {
   background-color: #effdf3;
   border: none;
   border-bottom: 3px solid #4ceea7;
-  max-width: 80vh;
+  width: 100%;
 }
 .comments-section form textarea {
   resize: none;
