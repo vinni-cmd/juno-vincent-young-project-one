@@ -44,6 +44,7 @@ h4 {
 
 .blog-main h3 {
   // The style guide size is used as the maximum allowed value
+  // Used this rule to keep heading words on the same line as screen shrinks
   font-size: clamp(2rem, 5vw + 1rem, 3.2rem);
 }
 

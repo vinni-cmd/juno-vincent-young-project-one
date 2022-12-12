@@ -5,51 +5,53 @@ nav {
     text-transform: uppercase;
     line-height: 2.9rem;
     letter-spacing: 0.1rem;
+    display: flex;
+    justify-content: center;
+    // The below rules result in a nav that scrolls with the page and retains good contrast and position
     position: fixed;
     z-index: 2;
     left: 0;
     background-color: rgba(255, 255, 255, 0.4);
     width: 100%;
-    display: flex;
-    justify-content: center;
-    ul {
-        width: min(90%, 1000px);
-        display: flex;
-        justify-content: flex-end;
-        gap: 2.5em;
-        li:first-child {
-            display: none;
-            font-size: 3rem;
+    a {
+        padding: 0.5em 0.5em;
+        border-bottom: 4px solid rgba($color: #000000, $alpha: 0);
+        &:hover,
+        &:focus {
+            outline: none;
+            border-bottom: 4px solid $primary-ac;
         }
-        a {
-            padding: 0.5em 0.5em;
-            border-bottom: 4px solid rgba($color: #000000, $alpha: 0);
-            &:hover,
-            &:focus {
+    }
+}
+
+nav ul {
+    width: min(90%, 1000px);
+    display: flex;
+    justify-content: flex-end;
+    gap: 2.5em;
+    li:first-child {
+        display: none;
+        font-size: 3rem;
+    }
+    @media (max-width: 800px) {
+        li.mobile-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            border: 0;
+            padding: 0;
+            white-space: nowrap;
+            clip-path: inset(100%);
+            clip: rect(0 0 0 0);
+            overflow: hidden;
+        }
+        li:first-child {
+            display: revert;
+            button:hover,
+            button:focus {
                 outline: none;
                 border-bottom: 4px solid $primary-ac;
-            }
-        }
-        @media (max-width: 800px) {
-            li.mobile-hidden {
-                position: absolute;
-                width: 1px;
-                height: 1px;
-                margin: -1px;
-                border: 0;
-                padding: 0;
-                white-space: nowrap;
-                clip-path: inset(100%);
-                clip: rect(0 0 0 0);
-                overflow: hidden;
-            }
-            li:first-child {
-                display: revert;
-                button:hover,
-                button:focus {
-                    outline: none;
-                    border-bottom: 4px solid $primary-ac;
-                }
             }
         }
     }

@@ -1,5 +1,52 @@
 @use "variables" as *;
 
+// styles applicable to all forms
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    max-width: 80vw;
+    .user-details {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        border: none;
+        gap: 1em;
+        @media (max-width: 800px) {
+            flex-direction: column;
+        }
+        input {
+            padding: 0.5em 1em 0.5em;
+            border: none;
+            border: none;
+            border-bottom: 3px solid $primary-ac;
+            width: 100%;
+        }
+    }
+    textarea {
+        resize: none;
+        border: 3px solid $primary-ac;
+        padding: 1em;
+    }
+    button {
+        background-color: $primary-ac;
+        padding: 0.55em 0.75em;
+        font-family: $heading-ff;
+        line-height: 3.2rem;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        text-align: center;
+        transition: 0.3s;
+        &:hover,
+        &:focus {
+            background-color: $primary-fc;
+            color: $primary-ac;
+            outline: none;
+        }
+    }
+}
+
+// styles only applicable to contact page form
 .contact-form {
     background-color: $secondary-bgc;
     box-shadow: -1.5em 1.5em 0 0 $secondary-ac;
@@ -14,99 +61,16 @@
         // Gets rid of horizontal scroll at 320px
         padding: 0;
     }
-    form {
-        display: flex;
-        flex-direction: column;
-        gap: 2em;
-        max-width: 80vw;
-        .user-details {
-            display: flex;
-            padding: 0;
-            margin: 0;
-            border: none;
-            gap: 1em;
-            @media (max-width: 800px) {
-                flex-direction: column;
-            }
-            input {
-                padding: 0.5em 1em 0.5em;
-                border: none;
-                background-color: $secondary-bgc;
-                border: none;
-                border-bottom: 3px solid $primary-ac;
-                width: 100%;
-            }
-        }
-        textarea {
-            resize: none;
-            background-color: $secondary-bgc;
-            border: 3px solid $primary-ac;
-            padding: 1em;
-        }
-        button {
-            background-color: $primary-ac;
-            padding: 0.55em 0.75em;
-            font-family: $heading-ff;
-            line-height: 3.2rem;
-            letter-spacing: 0.1rem;
-            text-transform: uppercase;
-            text-align: center;
-            transition: 0.3s;
-            &:hover,
-            &:focus {
-                background-color: $primary-fc;
-                color: $primary-ac;
-                outline: none;
-            }
-        }
+    input,
+    textarea {
+        background-color: $secondary-bgc;
     }
 }
 
+// styles only applicable to blog page form
 .comments-section {
-    form {
-        display: flex;
-        flex-direction: column;
-        gap: 2em;
-        max-width: 80vw;
-        .user-details {
-            display: flex;
-            padding: 0;
-            margin: 0;
-            border: none;
-            gap: 1em;
-            @media (max-width: 800px) {
-                flex-direction: column;
-            }
-            input {
-                padding: 0.5em 1em 0.5em;
-                border: none;
-                background-color: $primary-bgc;
-                border: none;
-                border-bottom: 3px solid $primary-ac;
-                width: 100%;
-            }
-        }
-        textarea {
-            resize: none;
-            background-color: $primary-bgc;
-            border: 3px solid $primary-ac;
-            padding: 1em;
-        }
-        button {
-            background-color: $primary-ac;
-            padding: 0.55em 0.75em;
-            font-family: $heading-ff;
-            line-height: 3.2rem;
-            letter-spacing: 0.1rem;
-            text-transform: uppercase;
-            text-align: center;
-            transition: 0.3s;
-            &:hover,
-            &:focus {
-                background-color: $primary-fc;
-                color: $primary-ac;
-                outline: none;
-            }
-        }
+    input,
+    textarea {
+        background-color: $primary-bgc;
     }
 }
