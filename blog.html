@@ -13,34 +13,36 @@
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/2c6cdcd39c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/styles.css">
+    <!-- js script -->
+    <script src="./main.js" defer></script>
 </head>
 
 <body>
     <header id="home" class="blog-header">
         <div class="wrapper">
             <nav>
-                <ul>
+                <div class="fixed-nav-wrapper">
                     <!-- should not be using aria hidden here. It does not quite work for focusable elements -->
                     <!-- Mobile slide-out nav button-->
-                    <li aria-hidden="true">
-                        <button>
-                            <i class="fa-solid fa-bars"></i>
-                        </button>
-                    </li>
-                    <!-- Navigation links -->
-                    <li class="mobile-hidden">
-                        <a href="./index.html#home">home</a>
-                    </li>
-                    <li class="mobile-hidden">
-                        <a href="./index.html#about">about</a>
-                    </li>
-                    <li class="mobile-hidden">
-                        <a href="./blog.html">blog</a>
-                    </li>
-                    <li class="mobile-hidden">
-                        <a href="./contact.html">contact</a>
-                    </li>
-                </ul>
+                    <a href="#" class="toggle-button" aria-hidden="true">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
+                    <ul class="nav-links mobile-hidden">
+                        <!-- Navigation links -->
+                        <li>
+                            <a href="./index.html#home">home</a>
+                        </li>
+                        <li>
+                            <a href="./index.html#about">about</a>
+                        </li>
+                        <li>
+                            <a href="./blog.html">blog</a>
+                        </li>
+                        <li>
+                            <a href="./contact.html">contact</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
             <h1 class="secondary-page-header">blog</h1>
         </div><!-- .wrapper end -->

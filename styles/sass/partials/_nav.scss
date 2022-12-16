@@ -5,9 +5,6 @@ nav {
     text-transform: uppercase;
     line-height: 2.9rem;
     letter-spacing: 0.1rem;
-    display: flex;
-    justify-content: center;
-    // The below rules result in a nav that scrolls with the page and retains good contrast and position
     position: fixed;
     z-index: 2;
     left: 0;
@@ -24,35 +21,52 @@ nav {
     }
 }
 
-nav ul {
-    width: min(90%, 1000px);
+.toggle-button {
+    display: none;
+    font-size: 3rem;
+    order: 1;
+    align-self: flex-start;
+    // keeps toggle button on right side of vp when nav-links are hidden
+    margin-left: auto;
+    @media (max-width: 800px) {
+        display: revert;
+    }
+}
+
+.fixed-nav-wrapper {
+    width: min(90%, 1200px);
+    margin: 0 auto;
     display: flex;
     justify-content: flex-end;
-    gap: 2.5em;
-    li:first-child {
-        display: none;
-        font-size: 3rem;
-    }
+    align-items: center;
+    gap: 2em;
     @media (max-width: 800px) {
-        li.mobile-hidden {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            margin: -1px;
-            border: 0;
-            padding: 0;
-            white-space: nowrap;
-            clip-path: inset(100%);
-            clip: rect(0 0 0 0);
-            overflow: hidden;
-        }
-        li:first-child {
-            display: revert;
-            button:hover,
-            button:focus {
-                outline: none;
-                border-bottom: 4px solid $primary-ac;
-            }
-        }
+        justify-content: space-between;
+        gap: 1em;
+    }
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    @media (max-width: 800px) {
+        flex-direction: column;
+        gap: 1em;
+    }
+}
+
+.mobile-hidden {
+    @media (max-width: 800px) {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
     }
 }
