@@ -454,7 +454,7 @@ nav a:hover, nav a:focus {
   }
 }
 
-.nav-links {
+.nav-links-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -464,7 +464,7 @@ nav a:hover, nav a:focus {
   gap: 2em;
 }
 @media (max-width: 800px) {
-  .nav-links {
+  .nav-links-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

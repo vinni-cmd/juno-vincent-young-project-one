@@ -1,11 +1,37 @@
 // mobile navigation functionality
 
 const navToggle = document.querySelector('.toggle-button');
-const navLinks = document.querySelector('.nav-links');
+const navLinksContainer = document.querySelector('.nav-links-container');
+const navLinks = navLinksContainer.querySelectorAll('a');
+
+function changeChildrenTabIndex(parentEl) {
+    if (parentEl.classList.contains('mobile-hidden')) {
+        navLinks.forEach(link => link.setAttribute('tabindex', '-1'));
+    } else {
+        navLinks.forEach(link => link.removeAttribute('tabindex'));
+    }
+}
 
 navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('mobile-hidden')
+    navLinksContainer.classList.toggle('mobile-hidden');
+    changeChildrenTabIndex(navLinksContainer);
 })
+
+// ensures that if you resize screen, while nav links are hidden, that the tabindex is adjusted appropriately. If you resize to larger screen sizes, the nav links should always be on display and interactive.
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 800) {
+        navLinks.forEach(link => link.removeAttribute('tabindex'));
+    } else {
+        changeChildrenTabIndex(navLinksContainer);
+    }
+})
+
+// for smaller screen sizes, ensure tabindex has appropriate value upon page load 
+if (window.innerWidth > 800) {
+    navLinks.forEach(link => link.removeAttribute('tabindex'));
+} else {
+    changeChildrenTabIndex(navLinksContainer);
+}
 
 // blog comment form functionality
 
@@ -34,7 +60,7 @@ function createCommentContainerEl() {
                                 <img src="./assets/comment-2.jpg" alt="Julia's profile picture">
                             </div>
                             <div class="visitor-commment">
-                                <p>${createDateString()} by <span class="user-name"></span></p>
+                                <p>${createDateString()} by <span   class="user-name"></span></p>
                                 <p class="user-comment"></p>
                             </div> <!-- .visitor-comment end -->`;
     return container;
