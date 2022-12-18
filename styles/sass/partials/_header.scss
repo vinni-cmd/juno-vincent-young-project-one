@@ -1,7 +1,7 @@
 @use "variables" as *;
 
 header {
-    background-image: url(../../assets/header-image.jpg);
+    background-image: url(../assets/header-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
@@ -36,10 +36,10 @@ header {
 
 // contact-page
 .contact-header {
-    background-image: url(../../assets/contact-header.jpg);
+    background-image: url(../assets/contact-header.jpg);
 }
 
 // blog-page
 .blog-header {
-    background-image: url(../../assets/blog-header.jpg);
+    background-image: url(../assets/blog-header.jpg);
 }
