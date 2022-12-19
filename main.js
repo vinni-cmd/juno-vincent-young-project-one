@@ -33,34 +33,46 @@ if (window.innerWidth > 800) {
     changeChildrenTabIndex(navLinksContainer);
 }
 
-// blog comment form functionality
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        navLinksContainer.classList.add('mobile-hidden');
+    }
+})
 
-const commentForm = document.querySelector('.comment-form');
+
+
+// BLOG COMMENTS FORM FUNCTIONALITY
+// Selects the comments section element
 const commentsSection = document.querySelector('.comments-section');
-
+// selects the form within the comments section element
+const commentForm = document.querySelector('.comment-form');
+// extracts data from form and returns it as a descriptive object 
 function getCommentDetails() {
     const userName = document.querySelector('#user-name').value;
+    const userEmail = document.querySelector('#user-email').value;
     const userComment = document.querySelector('#user-comment').value;
-    return { userName, userComment };
+    return { userName, userEmail, userComment };
 }
-
+// triggers the creation, population(using the extracted form data), and insertion of the html 
 function postCommentDetails(commentObject) {
     const containerEl = createCommentContainerEl();
     const nameEl = containerEl.querySelector('.user-name');
-    nameEl.textContent = `${commentObject.userName}`
     const commentEl = containerEl.querySelector('.user-comment');
+    nameEl.textContent = `${commentObject.userName}`
     commentEl.textContent = `${commentObject.userComment}`;
+    // this method is used in order to keep the form as the last child of the comments section
     commentsSection.insertBefore(containerEl, commentForm);
 }
 
 function createCommentContainerEl() {
     const container = document.createElement('article');
     container.classList.add('comment');
+    // quickly creates the required html framework but does not add the form data to avoid XSS issues. Ideally img element attributes would be populated from database on server
     container.innerHTML = `<div class="visitor-img">
-                                <img src="./assets/comment-2.jpg" alt="Julia's profile picture">
+                                <img src="./assets/comment-2.jpg" alt="User profile picture">
                             </div>
-                            <div class="visitor-commment">
-                                <p>${createDateString()} by <span   class="user-name"></span></p>
+                            <div class="visitor-comment">
+                                <p>${createDateString()} by <span class="user-name"></span></p>
                                 <p class="user-comment"></p>
                             </div> <!-- .visitor-comment end -->`;
     return container;
@@ -77,6 +89,8 @@ function createDateString() {
 
 commentForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    // extracts data from form
     const commentDetails = getCommentDetails();
+    // creates and populates the html
     postCommentDetails(commentDetails);
 })
