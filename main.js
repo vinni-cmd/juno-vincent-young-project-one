@@ -1,9 +1,12 @@
-// mobile navigation functionality
-
+// SMALL SCREEN SIZE NAV FUNCTIONALITY
+// selects the nav toggle button
 const navToggle = document.querySelector('.toggle-button');
+// selects the navigation links list element
 const navLinksContainer = document.querySelector('.nav-links-container');
+// selects all the anchor elements inside of the navigation links list element
 const navLinks = navLinksContainer.querySelectorAll('a');
 
+// when nav list is not expanded or visible ensure that keyboard users can't tab into the list
 function changeChildrenTabIndex(parentEl) {
     if (parentEl.classList.contains('mobile-hidden')) {
         navLinks.forEach(link => link.setAttribute('tabindex', '-1'));
@@ -12,6 +15,7 @@ function changeChildrenTabIndex(parentEl) {
     }
 }
 
+// hides or expands nav list upon click. nav list also expands when enter key is pressed while toggle button is in focus`
 navToggle.addEventListener('click', () => {
     navLinksContainer.classList.toggle('mobile-hidden');
     changeChildrenTabIndex(navLinksContainer);
@@ -33,19 +37,19 @@ if (window.innerWidth > 800) {
     changeChildrenTabIndex(navLinksContainer);
 }
 
+// allow keyboard users to close expanded nav list
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
         navLinksContainer.classList.add('mobile-hidden');
     }
 })
 
-
-
 // BLOG COMMENTS FORM FUNCTIONALITY
 // Selects the comments section element
 const commentsSection = document.querySelector('.comments-section');
 // selects the form within the comments section element
 const commentForm = document.querySelector('.comment-form');
+
 // extracts data from form and returns it as a descriptive object 
 function getCommentDetails() {
     const userName = document.querySelector('#user-name').value;
@@ -53,6 +57,7 @@ function getCommentDetails() {
     const userComment = document.querySelector('#user-comment').value;
     return { userName, userEmail, userComment };
 }
+
 // triggers the creation, population(using the extracted form data), and insertion of the html 
 function postCommentDetails(commentObject) {
     const containerEl = createCommentContainerEl();

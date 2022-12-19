@@ -406,11 +406,14 @@ nav {
   background-color: rgba(255, 255, 255, 0.4);
   width: 100%;
 }
-nav a {
+nav a,
+nav .toggle-button {
   padding: 0.5em 0.5em;
   border-bottom: 4px solid rgba(0, 0, 0, 0);
 }
-nav a:hover, nav a:focus {
+nav a:hover, nav a:focus,
+nav .toggle-button:hover,
+nav .toggle-button:focus {
   outline: none;
   border-bottom: 4px solid #4ceea7;
 }

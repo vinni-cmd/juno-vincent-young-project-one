@@ -24,9 +24,9 @@
                 <div class="fixed-nav-wrapper">
                     <!-- should not be using aria hidden here. It does not quite work for focusable elements -->
                     <!-- Mobile slide-out nav button-->
-                    <a href="#" class="toggle-button" aria-hidden="true">
+                    <button href="#" class="toggle-button" aria-hidden="true">
                         <i class="fa-solid fa-bars"></i>
-                    </a>
+                    </button>
                     <ul class="nav-links-container mobile-hidden">
                         <!-- Navigation links -->
                         <li>
@@ -147,13 +147,15 @@
                             <fieldset class="user-details">
                                 <legend class="sr-only">User details</legend>
                                 <label for="user-name" class="sr-only">Name</label>
-                                <input type="text" id="user-name" placeholder="Name" required pattern="[a-zA-Z0-9 ]+">
+                                <input type="text" id="user-name" placeholder="Name *" required pattern="[a-zA-Z0-9 ]+"
+                                    title="Accepts only letters, numbers and spaces">
                                 <label for="user-email" class="sr-only">Email</label>
-                                <input type="email" id="user-email" placeholder="Email address" required>
+                                <input type="email" id="user-email" placeholder="Email address *" required>
                             </fieldset>
                             <label for="user-comment" class="sr-only">Comment</label>
-                            <textarea name="message" id="user-comment" cols="30" rows="10" placeholder="Comment"
+                            <textarea name="message" id="user-comment" cols="30" rows="10" placeholder="Comment *"
                                 required></textarea>
+                            <div aria-hidden="true">* Required field</div>
                             <button type="submit">post comment</button>
                         </form>
                     </div> <!-- .comments-section end-->
