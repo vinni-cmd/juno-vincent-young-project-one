@@ -1,50 +1,57 @@
 // SMALL SCREEN SIZE NAV FUNCTIONALITY
+const navToggleApp = {};
 // selects the nav toggle button
-const navToggle = document.querySelector('.toggle-button');
+navToggleApp.navToggle = document.querySelector('.toggle-button');
 // selects the navigation links list element
-const navLinksContainer = document.querySelector('.nav-links-container');
+navToggleApp.navLinksContainer = document.querySelector('.nav-links-container');
 // selects all the anchor elements inside of the navigation links list element
-const navLinks = navLinksContainer.querySelectorAll('a');
+navToggleApp.navLinks = navToggleApp.navLinksContainer.querySelectorAll('a');
 
 // when nav list is not expanded or visible ensure that keyboard users can't tab into the list
-function changeChildrenTabIndex(parentEl) {
+navToggleApp.changeChildrenTabIndex = function (parentEl) {
     if (parentEl.classList.contains('mobile-hidden')) {
-        navLinks.forEach(link => link.setAttribute('tabindex', '-1'));
+        navToggleApp.navLinks.forEach(link => link.setAttribute('tabindex', '-1'));
     } else {
-        navLinks.forEach(link => link.removeAttribute('tabindex'));
+        navToggleApp.navLinks.forEach(link => link.removeAttribute('tabindex'));
     }
 }
 
-// hides or expands nav list upon click. nav list also expands when enter key is pressed while toggle button is in focus`
-navToggle.addEventListener('click', () => {
-    navLinksContainer.classList.toggle('mobile-hidden');
-    changeChildrenTabIndex(navLinksContainer);
-})
-
-// ensures that if you resize screen, while nav links are hidden, that the tabindex is adjusted appropriately. If you resize to larger screen sizes, the nav links should always be on display and interactive.
-window.addEventListener('resize', () => {
+// If you resize to larger screen sizes, the nav links should always be on display and interactive.
+navToggleApp.toggleChildrenTabIndex = function () {
     if (window.innerWidth > 800) {
-        navLinks.forEach(link => link.removeAttribute('tabindex'));
+        navToggleApp.navLinks.forEach(link => link.removeAttribute('tabindex'));
     } else {
-        changeChildrenTabIndex(navLinksContainer);
+        navToggleApp.changeChildrenTabIndex(navToggleApp.navLinksContainer);
     }
-})
-
-// for smaller screen sizes, ensure tabindex has appropriate value upon page load 
-if (window.innerWidth > 800) {
-    navLinks.forEach(link => link.removeAttribute('tabindex'));
-} else {
-    changeChildrenTabIndex(navLinksContainer);
 }
 
-// allow keyboard users to close expanded nav list
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        navLinksContainer.classList.add('mobile-hidden');
-    }
-})
+navToggleApp.setupEventListeners = function () {
+    // hides or expands nav list upon click. nav list also expands when enter key is pressed while toggle button is in focus`
+    navToggleApp.navToggle.addEventListener('click', () => {
+        navToggleApp.navLinksContainer.classList.toggle('mobile-hidden');
+        navToggleApp.changeChildrenTabIndex(navToggleApp.navLinksContainer);
+    });
+    // ensures that if you resize screen, while nav links are hidden, that the tabindex is adjusted appropriately.
+    window.addEventListener('resize', () => {
+        navToggleApp.toggleChildrenTabIndex();
+    });
+    // allow keyboard users to close expanded nav list
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            navToggleApp.navLinksContainer.classList.add('mobile-hidden');
+        }
+    });
+}
 
-// BLOG COMMENTS FORM FUNCTIONALITY
+navToggleApp.init = function () {
+    // for smaller screen sizes, ensure tabindex has appropriate value upon page load 
+    navToggleApp.toggleChildrenTabIndex();
+    navToggleApp.setupEventListeners();
+}
+
+navToggleApp.init();
+
+// BLOG COMMENTS FORM FUNCTIONALITY --- still need to contain all the below code in an app object
 // Selects the comments section element
 const commentsSection = document.querySelector('.comments-section');
 // selects the form within the comments section element
